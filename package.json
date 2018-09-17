@@ -1,7 +1,7 @@
 {
-  "name": "@dashevo/dashcore-p2p",
+  "name": "@stashcore/stashcore-p2p",
   "version": "1.1.6",
-  "description": "Interface to the dash P2P network for Dashcore",
+  "description": "Interface to the stash P2P network for Stashcore",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
@@ -46,20 +46,20 @@
   "keywords": [
     "bitcoin",
     "bitcore",
-    "dashcore"
+    "stashcore"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/dashcore-p2p.git"
+    "url": "https://github.com/stashpayioio/stashcore-p2p.git"
   },
   "dependencies": {
-    "bitcore-lib-dash": "^0.15.2",
+    "@stashcore/stashcore-lib": "^0.15.2",
     "bloom-filter": "^0.2.0",
     "node-buffers": "^0.1.1",
     "socks5-client": "^0.3.6"
   },
   "devDependencies": {
-    "bitcore-build-dash": "dashpay/bitcore-build-dash",
+    "bitcore-build-stash": "stashpayio/bitcore-build-stash",
     "brfs": "^1.2.0",
     "chai": "~1.10.0",
     "gulp": "^3.8.10",
