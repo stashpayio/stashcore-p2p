@@ -1,6 +1,6 @@
 {
   "name": "@stashcore/stashcore-p2p",
-  "version": "1.1.6",
+  "version": "1.1.61",
   "description": "Interface to the stash P2P network for Stashcore",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
@@ -52,8 +52,7 @@
     "type": "git",
     "url": "https://github.com/stashpayioio/stashcore-p2p.git"
   },
-  "dependencies": {
-    "@stashcore/stashcore-lib": "^0.15.2",
+  "dependencies": {    
     "bloom-filter": "^0.2.0",
     "node-buffers": "^0.1.1",
     "socks5-client": "^0.3.6"
