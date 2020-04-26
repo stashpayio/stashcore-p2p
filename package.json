@@ -2,13 +2,12 @@
   "name": "@stashcore/stashcore-p2p",
   "version": "1.1.61",
   "description": "Interface to the stash P2P network for Stashcore",
-  "author": "BitPay <dev@bitpay.com>",
+  "author": "Stash Core Group, Inc. <dev@stash.org>",
   "main": "index.js",
   "scripts": {
-    "lint": "gulp lint",
-    "test": "gulp test:node",
-    "coverage": "gulp coverage",
-    "build": "gulp"
+    "lint": "eslint .",
+    "test": "mocha",
+    "coverage": "nyc mocha"
   },
   "contributors": [
     {
@@ -44,25 +43,27 @@
     }
   ],
   "keywords": [
-    "bitcoin",
+    "stash",
     "bitcore",
     "stashcore"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/stashpayioio/stashcore-p2p.git"
+    "url": "https://github.com/stashpayio/stashcore-p2p.git"
   },
-  "dependencies": {    
+  "dependencies": {
     "bloom-filter": "^0.2.0",
     "node-buffers": "^0.1.1",
-    "socks5-client": "^0.3.6"
+    "socks5-client": "^1.2.6"
   },
   "devDependencies": {
-    "bitcore-build-stash": "stashpayio/bitcore-build-stash",
-    "brfs": "^1.2.0",
-    "chai": "~1.10.0",
-    "gulp": "^3.8.10",
-    "sinon": "^1.12.2"
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.3.0",
+    "sinon": "^7.2.2"
   },
   "license": "MIT"
 }

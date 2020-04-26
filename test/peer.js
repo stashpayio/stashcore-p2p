@@ -10,14 +10,14 @@ var expect = chai.expect;
 var sinon = require('sinon');
 var fs = require('fs');
 
-var bitcore = require('@stashcore/stashcore-lib');
-var _ = bitcore.deps._;
+var stashcore = require('@stashcore/stashcore-lib');
+var _ = stashcore.deps._;
 var P2P = require('../');
 var Peer = P2P.Peer;
 var EventEmitter = require('events').EventEmitter;
 var Messages = P2P.Messages;
 var messages = new Messages();
-var Networks = bitcore.Networks;
+var Networks = stashcore.Networks;
 
 describe('Peer', function() {
 
@@ -110,7 +110,7 @@ describe('Peer', function() {
     var peer, peer2, socket;
 
     peer = new Peer('localhost');
-    expect(peer.proxy).to.be.undefined();
+    expect(peer.proxy).to.be.undefined;
     socket = peer._getSocket();
     socket.should.be.instanceof(Net.Socket);
 
@@ -118,7 +118,7 @@ describe('Peer', function() {
     peer2.proxy.host.should.equal('127.0.0.1');
     peer2.proxy.port.should.equal(9050);
     socket = peer2._getSocket();
-    socket.should.be.instanceof(Socks5Client);
+    socket.should.be.instanceof(Socks5Client.Socket);
 
     peer.should.equal(peer2);
   });
@@ -232,7 +232,7 @@ describe('Peer', function() {
   it('relay setting respected', function() {
     [true,false].forEach(function(relay) {
       var peer = new Peer({host: 'localhost', relay: relay});
-      var peerSendMessageStub = sinon.stub(Peer.prototype, 'sendMessage', function(message) {
+      var peerSendMessageStub = sinon.stub(Peer.prototype, 'sendMessage').callsFake(function(message) {
         message.relay.should.equal(relay);
       });
       peer._sendVersion();

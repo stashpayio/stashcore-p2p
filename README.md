@@ -2,12 +2,11 @@ Stashcore P2P
 =======
 
 [![NPM Package](https://img.shields.io/npm/v/@stashcore/stashcore-p2p.svg?style=flat-square)](https://www.npmjs.org/package/@stashcore/stashcore-p2p)
-[![Build Status](https://img.shields.io/travis/stashpayioio/stashcore-p2p.svg?branch=master&style=flat-square)](https://travis-ci.org/stashpayioio/stashcore-p2p)
-[![Coverage Status](https://img.shields.io/coveralls/stashpayioio/stashcore-p2p.svg?style=flat-square)](https://coveralls.io/r/stashpayioio/stashcore-p2p?branch=master)
+[![Build Status](https://img.shields.io/travis/com/stashpayio/stashcore-p2p.svg?branch=master&style=flat-square)](https://travis-ci.com/stashpayio/stashcore-p2p)
 
 `stashcore-p2p` adds Stash protocol support for Stashcore.
 
-See [the main stashcore repo](https://github.com/stashpayioio/stashcore) for more information.
+See [the main stashcore-lib repo](https://github.com/stashpayio/stashcore-lib) for more information.
 
 ## Getting Started
 
@@ -47,10 +46,12 @@ Take a look at the [bitcore guide](http://bitcore.io/guide/peer.html) on the usa
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/stashpayioio/stashcore/blob/master/CONTRIBUTING.md) on the main stashcore repo for information about how to contribute.
+Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/stashpayio/stashcore-p2p/blob/master/CONTRIBUTING.md) file.
 
 ## License
 
-Code released under [the MIT license](https://github.com/dachevo/stashcore/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/stashpayio/stashcore/blob/master/LICENSE).
 
-Copyright 2013-2015 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.
+Copyright 2013-2017 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.  
+Copyright 2016-2017 The Stash Foundation, Inc.  
+Copyright 2017-2018 Stash Core Group, Inc.  

@@ -4,12 +4,12 @@
 
 var should = require('chai').should();
 
-var bitcore = require('@stashcore/stashcore-lib');
+var stashcore = require('@stashcore/stashcore-lib');
 var P2P = require('../');
 var Inventory = P2P.Inventory;
-var BufferUtils = bitcore.util.buffer;
-var BufferWriter = bitcore.encoding.BufferWriter;
-var BufferReader = bitcore.encoding.BufferReader;
+var BufferUtils = stashcore.util.buffer;
+var BufferWriter = stashcore.encoding.BufferWriter;
+var BufferReader = stashcore.encoding.BufferReader;
 
 describe('Inventory', function() {
 

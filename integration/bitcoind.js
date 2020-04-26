@@ -6,21 +6,21 @@ var chai = require('chai');
 var should = chai.should();
 var sinon = require('sinon');
 
-var bitcore = require('@stashcore/stashcore-lib');
-var _ = bitcore.deps._;
-var Random = bitcore.crypto.Random;
-var BN = bitcore.crypto.BN;
-var BufferUtil = bitcore.util.buffer;
+var stashcore = require('@stashcore/stashcore-lib');
+var _ = stashcore.deps._;
+var Random = stashcore.crypto.Random;
+var BN = stashcore.crypto.BN;
+var BufferUtil = stashcore.util.buffer;
 var p2p = require('../');
 var Peer = p2p.Peer;
 var Pool = p2p.Pool;
-var Networks = bitcore.Networks;
+var Networks = stashcore.Networks;
 var Messages = p2p.Messages;
 var Inventory = p2p.Inventory;
-var Block = bitcore.Block;
-var Transaction = bitcore.Transaction;
+var Block = stashcore.Block;
+var Transaction = stashcore.Transaction;
 
-// config 
+// config
 var network = process.env.NETWORK === 'testnet' ? Networks.testnet : Networks.livenet;
 var messages = new Messages({
   network: network
@@ -38,8 +38,8 @@ var txHash = {
   'testnet': '22231e8219a0617a0ded618b5dc713fdf9b0db8ebd5bb3322d3011a703119d3b'
 };
 
-// These tests require a running bitcoind instance
-describe('Integration with ' + network.name + ' bitcoind', function() {
+// These tests require a running dashd instance
+describe('Integration with ' + network.name + ' dashd', function() {
 
   this.timeout(15000);
   var opts = {

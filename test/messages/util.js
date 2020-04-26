@@ -4,8 +4,8 @@
 
 var should = require('chai').should();
 var utils = require('../../lib/messages/utils');
-var bitcore = require('@stashcore/stashcore-lib');
-var BufferReader = bitcore.encoding.BufferReader;
+var stashcore = require('@stashcore/stashcore-lib');
+var BufferReader = stashcore.encoding.BufferReader;
 
 describe('Message Utils', function() {
 
